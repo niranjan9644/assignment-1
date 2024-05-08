@@ -1,0 +1,34 @@
+#include <iostream>
+
+class DivisibleByNine {
+public:
+    DivisibleByNine() {
+        std::cout << "Finding numbers divisible by 9 between 100 and 200..." << std::endl;
+    }
+
+    ~DivisibleByNine() {
+        std::cout << "Calculation completed." << std::endl;
+    }
+
+    void findAndSum() {
+        int sum = 0;
+        int count = 0;
+
+        for (int i = 100; i <= 200; ++i) {
+            if (i % 9 == 0) {
+                sum += i;
+                count++;
+            }
+        }
+
+        std::cout << "Total numbers divisible by 9: " << count << std::endl;
+        std::cout << "Sum of numbers divisible by 9: " << sum << std::endl;
+    }
+};
+
+int main() {
+    DivisibleByNine obj;
+    obj.findAndSum();
+
+    return 0;
+}
